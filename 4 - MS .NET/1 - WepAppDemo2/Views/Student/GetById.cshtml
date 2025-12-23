@@ -1,0 +1,24 @@
+﻿@model WebAppTest1.Models.Student
+
+<h2>Student Details</h2>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <td>Fees</td>
+        <td>@Model.Fees</td>
+    </tr>
+</table>
+
+<a asp-action="Index">Back to List</a>

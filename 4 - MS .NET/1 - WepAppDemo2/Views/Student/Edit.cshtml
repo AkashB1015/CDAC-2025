@@ -1,0 +1,29 @@
+﻿@model WebAppTest1.Models.Student
+
+<h2> Student Edit from </h2>
+
+<form asp-action="Edit" method="post">
+    <div>
+        <label asp-for="Id"></label>
+        <input readonly ="readonly" asp-for="Id" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="Fees"></label>
+        <input asp-for="Fees" class="form-control" />
+    </div>
+
+    <br />
+    <button type="submit">Save</button>
+    <a asp-action="Index">Back to List</a>
+</form>
