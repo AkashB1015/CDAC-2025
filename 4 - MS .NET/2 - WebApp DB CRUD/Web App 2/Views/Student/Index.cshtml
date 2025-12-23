@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Student>
+
+
+<h2>@ViewBag.Title @ViewBag.MyName</h2>
+
+<a asp-action="Add" method="get">Add New Student</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Fees</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.Fees</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" >Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" >Delete</a>
+                    <a asp-action="GetById" asp-route-id="@item.Id" >View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

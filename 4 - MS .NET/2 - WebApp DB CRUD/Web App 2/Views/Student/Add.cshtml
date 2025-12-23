@@ -1,0 +1,30 @@
+﻿@model Student
+<h2>Add New Student Form</h2>
+<form asp-action="Add" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div>
+        <label asp-for="Id">Id</label>
+        <input asp-for="Id" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Age">Age</label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Fees">Fees</label>
+        <input asp-for="Fees" class="form-control" />
+    </div>
+    <button type="submit">Save</button>
+    <a asp-action="Index">Back to List</a>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
